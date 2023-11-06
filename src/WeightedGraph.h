@@ -130,6 +130,7 @@ namespace csi281 {
             // visit is a lambda expression; think about it like a mini-function
             // that can be called by calling visit(yourVertexGoesHere)
             // this aligns with the inner function visit() from the pseudo code in the slides
+            // Should be able to call all class functions and vars
             auto visit = [&](V v) {
                 // YOUR CODE HERE
             };
