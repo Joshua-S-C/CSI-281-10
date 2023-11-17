@@ -132,10 +132,25 @@ namespace csi281 {
             // this aligns with the inner function visit() from the pseudo code in the slides
             // Should be able to call all class functions and vars
             auto visit = [&](V v) {
-                // YOUR CODE HERE
+                visited.insert(v);
+
+                for (WeightedEdge edge : neighborsWithWeights(v))
+                    if(visited.find(edge.to) == visited.end())
+                        frontier.push(edge);
             };
             
-            // YOUR CODE HERE
+            visit(start);
+
+            while (!frontier.empty()) {
+                WeightedEdge edge = frontier.top();
+                frontier.pop();
+
+                if (visited.find(edge.to) != visited.end())
+                    continue;
+
+                solution.push_back(edge);
+                visit(edge.to);
+            }
             
             return solution;
         }
