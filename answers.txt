@@ -1,0 +1,28 @@
+Joshua Sinclair Chong - Assignment 10 Answers
+
+1: By getting the bottom of the queue, instead of the top.
+
+2: MST builds a tree, where nodes can have more than 2 conntections. 
+Traveling Salesman builds a path, where every node only connects to a next and previous node.
+
+3: 
++-----------+---------+----------+----------+-----------+---------+
+| Cities    | Seattle | San Fran | LA       | Riverside | Phoenix |
++-----------+---------+----------+----------+-----------+---------+
+| Seattle   | 0       | 678      | 0        | 1737      | 0       |
++-----------+---------+----------+----------+-----------+---------+
+| San Fran  | 0       | 0        | 0        | 386       | 348     |
++-----------+---------+----------+----------+-----------+---------+
+| LA        | 0       | 0        | 0        | 50        | 0       |
++-----------+---------+----------+----------+-----------+---------+
+| Riverside | 0       | 0        | 0        | 0         | 307     |
++-----------+---------+----------+----------+-----------+---------+
+| Phoenix   | 0       | 0        | 0        | 0         | 0       |
++-----------+---------+----------+----------+-----------+---------+
+
+4: (n Log n) with priority queue. (n^2) without. Priority queue has more efficient access to elements.
+
+5: Because it only considered the next option for comparisons, as opposed to the whole structure
+
+6: The Bellman-Ford algorithm was first proposed by Alfonso Shimbel in 1955, but was named after Richard Bellman and Lester Ford Jr., who published it in 1958 and 1956.  Edward F. Moore also published a variation in 1959, so its sometimes called the Bellman–Ford–Moore algorithm.
+It computes shortest paths from a single source vert to all of the other verts in a weighted digraph. Slower than Dijkstra's, but able to handle negative weight edges.
